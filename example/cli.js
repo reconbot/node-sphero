@@ -2,10 +2,14 @@ var roundRobot = require('../');;
 
 var sphero = new roundRobot.Sphero();
 
+var keypress = require('keypress');
+
+// make `process.stdin` begin emitting "keypress" events
+keypress(process.stdin);
+
 console.log(sphero);
 
 sphero.connect();
-
 sphero.on("connected", function(ball){
   console.log("Connected!");
   console.log("  c - change color");
@@ -18,12 +22,12 @@ sphero.on("connected", function(ball){
   var rgb = color();
   sphero.setRGBLED(rgb[0], rgb[1], rgb[2], false);
 
-  var stdin = process.openStdin(); 
-  require('tty').setRawMode(true);    
-
-  stdin.on('keypress', function (chunk, key) {
-    if (key && key.ctrl && key.name == 'c') process.exit();
-    if(key && key.name == 'c'){
+  // listen for the "keypress" event
+  process.stdin.on('keypress', function (ch, key) {
+    if (key && key.ctrl && key.name == 'c') {
+      process.stdin.pause(); process.exit();
+    }
+   if(key && key.name == 'c'){
       var rgb = color();
       sphero.setRGBLED(rgb[0], rgb[1], rgb[2], false);
     }
@@ -34,6 +38,9 @@ sphero.on("connected", function(ball){
     if(key && key.name == 'up') sphero.roll(0, 0.5);
     if(key && key.name == 'down') sphero.roll(0, 0);
   });
+  process.stdin.setRawMode(true);
+  process.stdin.resume();
+
 });
 
 var color = function(){
