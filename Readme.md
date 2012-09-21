@@ -4,7 +4,7 @@
 
     npm install node-sphero
 
-Connect your [Sphero](http://gosphero.com) to your laptop over bluetooth. At this time only OSX 10.8 has been tested.
+Connect your [Sphero](http://gosphero.com) to your laptop over bluetooth. At this time only OSX 10.8/Windows 7 has been tested.
 
 Add Sphero to your app:
 
@@ -22,15 +22,24 @@ Run that, and your sphero should turn #00FF00... green.
 
 Check out the examples for more ideas.
 
+## OS X
 
-## API
+You will need Node.js 8.x and the build tool provided by xcode. The Command Line tools for xcode can be downloaded from Apple's [developer site](https://developer.apple.com/downloads/index.action) for free. 
 
-TODO.. fill in this list...
+You can install NodeJS for by downloading it from [nodejs.org](http://nodejs.org)
 
-setBackLED
-setRGBLED
-setHeading
-roll
+
+## Windows
+
+You will need node.js 8.x, (node-gyp(included with node) / Python 2.x / and the build tools provided by Visual Studio 2010)
+
+You can install NodeJS for by downloading it from [nodejs.org](http://nodejs.org)
+
+Python. Remember you want the latest 2.x releease: [python windows binaries](http://www.python.org/download/releases/)
+
+If you dont have visual studio 2010, you can download the [express edition](http://www.microsoft.com/visualstudio/eng/downloads#d-2010-express) for free. You'll want the c++ version, or the all in one.
+
+If have a of Visual Studio OTHER THAN 2010, you might run into some issues. Please read [this](https://github.com/TooTallNate/node-gyp/issues/44)
 
 ## In Progress
 
