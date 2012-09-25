@@ -33,7 +33,7 @@ You can install NodeJS for by downloading it from [nodejs.org](http://nodejs.org
 
 You will need node.js 8.x (32-bit only), (node-gyp(included with node) / Python 2.x / and the build tools provided by Visual Studio 2010)
 
-You must use the 32bit version of nodejs, because serialprt doesnt support builds on the x64 platform, yet.
+You must use the 32bit version of nodejs, because there are issues with the serialport builds on the x64 platform.
 You can install NodeJS by downloading it from [nodejs.org](http://nodejs.org/download/) Current 32bit version is available here: [http://nodejs.org/dist/v0.8.9/node-v0.8.9-x86.msi](http://nodejs.org/dist/v0.8.9/node-v0.8.9-x86.msi)
 
 Python. Remember you want the latest 2.x releease: [python windows binaries](http://www.python.org/download/releases/)

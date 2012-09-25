@@ -37,6 +37,8 @@ sphero.on("connected", function(ball){
     if(key && key.name == 'left') sphero.setHeading(315);
     if(key && key.name == 'up') sphero.roll(0, 0.5);
     if(key && key.name == 'down') sphero.roll(0, 0);
+    if(key && key.name == 'x') sphero.setHeading(45).setHeading(315).setBackLED(1);
+    
   });
   process.stdin.setRawMode(true);
   process.stdin.resume();
