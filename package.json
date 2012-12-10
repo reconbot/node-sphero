@@ -1,6 +1,6 @@
 {
   "name": "node-sphero",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description":"Control the Sphero robotic ball from Node!",
   "author":"Mick Thompson <mick@mick.im>",
   "repository": {
