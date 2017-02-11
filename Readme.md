@@ -1,5 +1,7 @@
 # Node Sphero
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/reconbot/node-sphero.svg)](https://greenkeeper.io/)
+
 ## How to use
 
     npm install node-sphero
